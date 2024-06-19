@@ -1,18 +1,21 @@
 #!/bin/bash
 
 # Define where to save the binaries
-TUSD_BIN_PATH="/usr/local/bin/tusd"
-RUNPOD_UPLOADER_BIN_PATH="/usr/local/bin/runpod-uploader"
-RUNPOD_UPLOADER_SCRIPT_PATH="/etc/runpod-uploader/scripts"
+TUSD_BIN_PATH="$HOME/runpod-installer/bin/tusd"
+RUNPOD_UPLOADER_BIN_PATH="$HOME/runpod-installer/bin/runpod-uploader"
+RUNPOD_UPLOADER_SCRIPT_PATH="$HOME/runpod-installer/scripts"
 
 # Define the directory for hooks
-HOOKS_DIR="/etc/tusd/hooks"
+HOOKS_DIR="$HOME/runpod-installer/hooks"
 
 # Create the hooks directory
 mkdir -p "${HOOKS_DIR}"
 
 # Create the scripts directory
 mkdir -p "${RUNPOD_UPLOADER_SCRIPT_PATH}"
+
+# Create the bin directory
+mkdir -p "$HOME/runpod-installer/bin"
 
 # Download and setup tusd
 echo "Downloading and setting up tusd..."
@@ -44,4 +47,4 @@ echo "Setup completed successfully."
 echo "tusd is now available at ${TUSD_BIN_PATH}"
 echo "runpod-uploader is now available at ${RUNPOD_UPLOADER_BIN_PATH}"
 echo "Hook scripts are set up at ${HOOKS_DIR}"
-echo "Aditional scripts saved to ${RUNPOD_UPLOADER_SCRIPT_PATH}"
+echo "Additional scripts saved to ${RUNPOD_UPLOADER_SCRIPT_PATH}"
