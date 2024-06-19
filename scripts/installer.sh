@@ -23,17 +23,17 @@ chmod +x "${TUSD_BIN_PATH}"
 
 # Download and setup runpod-uploader binary
 echo "Downloading and setting up runpod-uploader binary..."
-curl -L https://github.com/kodxana/RunPod-FilleUploader/releases/download/v1.2/runpod-uploader -o "${RUNPOD_UPLOADER_BIN_PATH}"
+curl -L https://github.com/PrivTEC/RunPod-FilleUploader/releases/download/v1.2/runpod-uploader -o "${RUNPOD_UPLOADER_BIN_PATH}"
 chmod +x "${RUNPOD_UPLOADER_BIN_PATH}"
 
 # Download and setup hook scripts
 echo "Downloading and setting up hook scripts..."
-curl -L https://github.com/kodxana/RunPod-FilleUploader/raw/main/hook/post-finish -o "${HOOKS_DIR}/post-finish"
-curl -L https://github.com/kodxana/RunPod-FilleUploader/raw/main/hook/rename_uploaded_file.py -o "${HOOKS_DIR}/rename_uploaded_file.py"
+curl -L https://github.com/PrivTEC/RunPod-FilleUploader/raw/main/hook/post-finish -o "${HOOKS_DIR}/post-finish"
+curl -L https://github.com/PrivTEC/RunPod-FilleUploader/raw/main/hook/rename_uploaded_file.py -o "${HOOKS_DIR}/rename_uploaded_file.py"
 chmod +x "${HOOKS_DIR}/post-finish"
 chmod +x "${HOOKS_DIR}/rename_uploaded_file.py"
-curl -L https://github.com/kodxana/RunPod-FilleUploader/raw/main/scripts/ssh-setup.sh -o "${RUNPOD_UPLOADER_SCRIPT_PATH}/ssh-setup.sh"
-curl -L https://github.com/kodxana/RunPod-FilleUploader/raw/main/scripts/run-speedtest.sh -o "${RUNPOD_UPLOADER_SCRIPT_PATH}/run-speedtest.sh"
+curl -L https://github.com/PrivTEC/RunPod-FilleUploader/raw/main/scripts/ssh-setup.sh -o "${RUNPOD_UPLOADER_SCRIPT_PATH}/ssh-setup.sh"
+curl -L https://github.com/PrivTEC/RunPod-FilleUploader/raw/main/scripts/run-speedtest.sh -o "${RUNPOD_UPLOADER_SCRIPT_PATH}/run-speedtest.sh"
 chmod +x "${RUNPOD_UPLOADER_SCRIPT_PATH}/ssh-setup.sh"
 chmod +x "${RUNPOD_UPLOADER_SCRIPT_PATH}/run-speedtest.sh"
 
