@@ -43,8 +43,13 @@ chmod +x "${RUNPOD_UPLOADER_SCRIPT_PATH}/run-speedtest.sh"
 # Clean up downloaded and extracted files
 rm -rf tusd.tar.gz tusd_linux_amd64
 
+# Add to PATH
+echo 'export PATH=$HOME/runpod-installer/bin:$PATH' >> ~/.bashrc && source ~/.bashrc
+
 echo "Setup completed successfully."
 echo "tusd is now available at ${TUSD_BIN_PATH}"
 echo "runpod-uploader is now available at ${RUNPOD_UPLOADER_BIN_PATH}"
 echo "Hook scripts are set up at ${HOOKS_DIR}"
 echo "Additional scripts saved to ${RUNPOD_UPLOADER_SCRIPT_PATH}"
+echo "The directory \$HOME/runpod-installer/bin has been added to your PATH"
+
